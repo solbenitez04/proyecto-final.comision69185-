@@ -1,0 +1,2521 @@
+/* --- RESET --- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ESTILOS PARA MOBILE */
+/* ---------- BODY ---------- */
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+/* ---------- MAIN GENERAL ---------- */
+main{
+    flex-grow: 1;  /* hace que el contenido crezca sinempujar el footer */
+    flex: 1;
+    width: 100%;
+    background-color: rgb(252, 233, 255);
+}
+
+/* ---------- HEADER ---------- */
+header{
+    display: flex;
+    padding: 1% 2%;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #fab9f6;
+    border-bottom: 2px solid rgb(71, 0, 84);
+    flex-wrap: wrap;  /* hace que se acomoden los elementos  sino hay espacio */
+    flex-direction: column;
+}
+
+.contenido-header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 1%;
+    align-items: center;
+}
+
+.titulo-menu{
+    font-size: 100%;
+}
+
+/* logo */
+.logo img{
+    display: flex;
+    height: 50px;
+}
+
+/* menú */
+.menu-navegacion{
+    display: none;
+}
+
+.menu-desplegable button, .menu-desplegable ul li a{
+    text-align: center;
+    font-weight: 600;
+    color: rgb(71, 0, 84);
+}
+
+.menu-desplegable ul li a{
+    font-weight: 500;
+}
+
+.custom-dropdown::after{ /* flecha */
+    display: none; /* ocultar la flecha predeterinada con ::after */
+}
+
+.flecha-menu{ /* flecha menu */
+    width: 35%;
+    height: auto;
+}
+
+/* buscador desplegable */
+.buscador-desplegable button{
+    padding: 1%;
+    display: flex;
+    align-content: center;
+    background-color: transparent;
+    border: none;
+}
+
+ .bi-search{  /* lupa */
+    height: 30px;
+    width: auto;    
+    color: rgb(71, 0, 84);
+}
+
+.contenedor-buscador-barra{
+    display: none;
+}
+
+/* .buscar{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: ; */
+    /* margin: 40px 60px; */
+/* } */
+
+/* .buscar input{
+    font-size: 12px;
+    padding: 2px;
+    border: 1px solid beige;
+    border-radius: 5px;
+} */
+
+/* ---------- FOOTER ---------- */
+footer{
+    display: flex;
+    flex-direction: column;
+    clear: both;
+    background-color: #fab9f6;
+}
+
+/* estilos para el acordion del footer */
+.accordion-item{
+    border: none;
+    border-bottom: 1px solid rgb(71, 0, 84);
+    background-color: transparent;
+    border-top: 1px solid rgb(71, 0, 84);
+}
+
+.accordion-button{
+    background-color: transparent;
+    padding: 5%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-enlaces li, .footer-enlaces a{
+    list-style: none;
+    color: rgb(137, 62, 151);
+    font-size: 100%;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+
+.logo-footer{
+    text-align: center;
+    margin: 0;
+}
+
+.logo-footer img{
+    width: 20%;
+    height: auto;
+    margin: 3%;
+}
+
+.flecha-footer{
+    display: none;
+}
+
+.accordion-button::after{
+    display: none;
+    
+}
+
+/* transicion al icono para una rotacion suave */
+.accordion-button svg{
+    transition: transform 0.3s ease;
+}
+
+/* cuando el acordeon esté abierto gira el icono 90° */
+.accordion-button:not(.collapsed) svg{
+    transform: rotate(90deg);
+}
+
+.flecha-footer{
+    display: inline-block;
+    vertical-align: middle;
+    justify-content: space-between;
+    width: 8%;
+    height: auto;
+    color: rgb(71, 0, 84);
+}
+
+/* estilos para la seccion follow us */
+.seguinos{
+    display: flex;
+    flex-direction: column;
+}
+
+.seguinos h3{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 100%;
+    letter-spacing: 2px;
+    margin: 10% 0 5% 0;
+}
+
+.redes-sociales{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 5% 6% 10% 6%;
+    column-gap: 5px;
+    justify-items: center;
+}
+
+.accordion-item button{
+    color: rgb(71, 0, 84);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+/* .footer-contenedor{
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+} */
+
+/* .footer-section{
+    width: 25%;
+} */
+
+/* .footer-section h2{
+    font-size: 15px;
+} */
+
+/* redes sociales */
+.bi-whatsapp, .bi-instagram, .bi-envelope-at{
+    color: rgb(71, 0, 84);
+    height: 35px;
+    width: auto;
+}
+
+/* footer{
+    text-align: center;
+    padding: 20px;
+    clear: both;
+    margin-top: auto;
+    background-color: #fab9f6;
+    color: rgb(71, 0, 84);
+    width: 100%;
+    border-top: 2px solid rgb(71, 0, 84);
+}
+
+.footer-section, .logo-footer{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+}
+
+.logo-footer img{
+    width: 80px;
+    height: auto;
+    display: flex;
+    margin-left: auto; 
+
+}
+
+.footer-enlaces li, a{
+    list-style: none;
+    text-decoration: none;
+    color: rgb(71, 0, 84);
+} */
+
+/* .footer-contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+    min-width: ;
+}
+
+.footer-section h2{
+    color: rgb(71, 0, 84);
+    font-size: 14px;
+    text-transform: initial;
+    font-weight:900;
+}
+
+.footer-section ul{
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section li{
+    margin-bottom: 8px;
+}
+
+.footer-section a , .a2{
+    color: rgb(71, 0, 84);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.logo-footer{
+    align-self: center;
+
+}
+
+.logo-footer img{
+    width: 80px;
+    height: auto;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    margin-left: auto; 
+}
+
+/* ---------- MAIN INICIO ---------- */
+.main-inicio{
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.mas-vendidos h1 {
+    margin: 20px 0;
+    text-align: left;
+    color: black;
+    text-transform:initial;
+    font-size: 18px;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.productos{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    justify-items: center;
+    gap: 2%;
+    row-gap: 1%; 
+    max-width: 100%;
+    padding: 0%;
+}
+
+.seccion-produtos{
+    text-align: center;
+}
+
+.productos img{
+    width: 175px;
+    height: auto;
+    max-width: 350px;
+    border-radius: 10px;
+    border: 2px solid rgb(71, 0, 84);
+}
+
+/* ---------- MAIN COMPRAR ---------- */
+.categorias h2{
+    text-align: left;
+}
+
+.comprar, .contenedor-preguntas-frecuentes{
+    align-content: center;
+    background-color: rgb(255, 255, 255);
+    margin: 5%;
+    padding: 0 25px 0 15px;
+    border: 2px solid rgb(71, 0, 84);
+    border-radius: 15px;
+    overflow: hidden;  /* evita que el texto se salga del contenedor */
+}   
+
+.comprar h1, .contenedor-preguntas-frecuentes h1{
+    text-align: center;
+    padding: 15px;
+    margin: 0;
+    margin-bottom: 2px;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.pasos-comprar ol li{
+    margin: 5px;
+}
+
+/* ---------- MAIN PREGUNTAS FRECUENTES ---------- */
+.contenedor-preguntas-frecuentes h1{
+    padding: 0;
+    padding-top: 10%;
+    text-align: center;
+    margin-left: 15px;
+    margin-bottom: 25px;
+}
+
+ .conjunto-pregunta{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    text-align: justify;
+    line-height: 100%;
+    font-weight: 300;
+    margin: 10px 0 3px 0;
+}
+
+.pregunta{
+    font-size: 17px;
+    text-align: left;
+}
+
+.respuesta{
+    font-size: 16px;
+    text-align: justify;
+}
+
+/* .comprar{
+    align-content: center;
+    background-color: rgb(255, 255, 255);
+    margin: 0 150px;
+    border: 2px solid rgb(71, 0, 84);
+    border-radius: 15px;
+}
+
+.comprar li{
+    text-align: justify;
+    align-content: center;
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 160%;
+    margin: 20px 60px;
+} */
+
+/* ---------- MAIN PRODUCTOS ---------- */
+.main-productos{
+    background-color: white;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.main-productos h1{
+    margin: 6% 5% 3%;
+    text-transform: uppercase;
+    font-size: 23px;
+    font-weight: 700;
+    text-align: left;
+}
+
+.contorno-catalogo{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 6px;
+    row-gap: 6px;
+    margin: 5px 20px 25px;
+} 
+
+.producto{
+    border: 1px solid rgb(71, 0, 84);
+    border-radius: 8px;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    background-color: rgb(252, 233, 255);
+}
+
+/* .producto{
+
+    width: 100%;
+    display: grid;
+    margin: 50px;
+    grid-template-columns: repeat(2,1fr);
+    padding: 50px;
+}*/
+
+.producto img{
+    width: 100%;  /* la imagen occupa el 100% del contenedor */
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 8px 8px 0 0;
+} 
+
+.producto h3{
+    font-size: 15px;
+    font-weight: 600;
+    padding: 3px;
+    margin-bottom: 5px;
+}
+
+.producto p{
+    line-height: 25px;
+    font-weight: 500;
+}
+
+.categorias-productos{
+    text-align: left;
+}
+
+.categorias-productos h2{
+    font-size: 17px;
+    text-align: left;
+    font-weight: 600;
+    margin: 0 0 3% 5%;
+}
+
+.categorias-detalladas ul{
+    display: none;
+}
+
+
+/* descomentar cuando sean enlace con a los li */
+/* .categorias-detalladas a{
+    color: black;
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid rgb(71, 0, 84);
+    border-radius: 5px;
+} */
+
+/* .categorias-detalladas ul{
+    display: none;
+} */
+
+/* .categorias{
+    border: 2px solid rgb(71, 0, 84);
+    border-radius: 10px;
+    /* margin: 0 650px; */
+/*  float: left;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.categorias h2{
+    margin-bottom: 15px;
+}
+
+.categorias ul{
+    list-style-type: none;
+}
+
+.categorias ul li{
+    margin: 10px 0;
+}
+
+.categorias ul li a{
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.categorias ul li a:hover{
+    color: blue;
+} */
+
+/* ---------- MAIN PREGUNTAS ---------- */
+/* .contenedor-preguntas{
+    text-align: justify;
+    align-content: center;
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 160%;
+    margin: 40px 220px;
+    background-color: white;
+    border: 2px solid rgb(71, 0, 84);
+    border-radius: 10px;
+    list-style-type: none;
+} */
+/* no funciona */
+/* .conjunto-pegunta{
+    margin-bottom: 20px;
+}
+
+.pregunta{
+    text-align: justify;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    margin: 8px 50px;
+    line-height: 1.1;
+}
+
+.respuesta{
+    text-align: justify;
+    align-content: center;
+    font-size: 17px;
+    line-height: 1.2;
+    margin-bottom: 5px;
+    margin: 20px 60px;
+    font-weight: 400;
+}
+
+.respuesta , .pregunta{
+    list-style-type: none;
+} */
+
+/* ---------- MAIN CONTACTO ---------- */
+.main-contacto{
+    background-color: white;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: left;
+    padding: 2%;
+}
+
+.contenedor-contacto{
+    margin: 5%;
+} 
+
+.datos-contacto{
+    padding: 0 0 7% 0;
+    text-align: left;
+}
+
+.linea-contacto{
+    border-bottom: 2px solid rgb(71, 0, 84);
+    width: 60%;
+    margin: 5% auto 0;
+}
+
+.titulo-contacto{
+    color: black;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.datos-contacto p, .datos-contacto-y-formulario{
+    text-align: left;
+    width: 100%;
+    margin: 0;
+}
+
+/* icono */
+.icono-contacto{
+    color: rgb(71, 0, 84);
+    height: 20px;
+    width: auto;
+    padding-right: 15px;
+}
+
+.datos-contacto-y-formulario, a{
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 40px;
+    text-align: left;
+}
+
+.titulo-contacto{
+    color: black;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+/* formulario contacto */
+.formulario-contacto{
+    width: 100%;
+}
+
+.formulario-contacto p{
+    padding-top: 1%;
+}
+
+.contenedor-formulario{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.insertar-formulario{
+    width: 100%;
+}
+
+.insertar-formulario-mensaje input{
+    width: 206%;
+}
+
+
+
+
+
+
+
+/* .contacto a , .titulo-contacto{
+    color: black;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+} */
+
+/* .contacto li{
+    list-style-type: none;
+    margin-bottom: 10px;
+} */
+
+/* .contorno-formulario h2{
+    padding: 3%;
+    margin-inline-start: 5%;
+    color: black;
+    text-transform:initial;
+} */
+
+
+/* MQ ESTILOS PARA TABLET */
+@media screen and (min-width:600px){
+    /* ---------- HEADER ---------- */  
+    .menu-navegacion{
+        display: none;
+    }
+
+    .menu-contenedor{
+        display: none;
+    }
+
+    .logo img{
+        height: 100px;
+    }
+
+    .menu-desplegable button, .menu-desplegable ul li a{
+        font-size: 30px;
+    }
+
+    .bi-search{
+        height: 40px;
+        width: auto;
+    }
+
+    .form-control{
+        height: auto;
+        width: fit-content !important;
+        font-size: 25px;
+        white-space: nowrap;
+        padding: auto;
+        border: 2px solid rgb(71, 0, 84);
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer-enlaces li, .footer-enlaces a{
+        font-size: 150%;
+        letter-spacing: 5px;
+    }
+
+    .logo-footer img{
+        width: 15%;
+    }
+
+    .flecha-footer{
+        width: 5%;
+    }
+
+    .seguinos h3{
+        font-size: 200%;
+        letter-spacing: 4px;
+        margin: 5% 0 3% 0;
+    }
+
+    .bi-whatsapp, .bi-instagram, .bi-envelope-at{
+        height: 48px;
+        width: auto;
+    }
+
+    .accordion-item button{
+       font-size: 20px;
+       letter-spacing: 5px;
+    }
+
+    /* ---------- MAIN INICIO ---------- */
+    .mas-vendidos h1 {
+        margin: 5px 0;
+        font-size: 28px;
+        letter-spacing: 2px;
+        padding: 25px 0;
+    }
+
+    .productos{
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        justify-items: center;
+        gap: 2%;
+        row-gap: 1%; 
+    }
+
+    .productos img{
+        width: 500px;
+        height: auto;
+    }
+
+    /* ---------- MAIN PREGUNTAS FRECUENTES ---------- */  
+    .contenedor-preguntas-frecuentes h1{
+        font-size: 35px;
+    }
+
+    .pregunta{
+        font-size: 25px;
+        font-weight: 600;
+    }
+
+    .respuesta{
+        font-size: 25px;
+        line-height: 35px;
+    }
+
+    /* ---------- MAIN PRODUCTOS ---------- */
+    .main-productos h1{
+        margin: 25px 20px;
+        font-size: 35px;
+        letter-spacing: 5px;
+    }
+
+    .contorno-catalogo{
+        gap: 15px;
+        row-gap: 15px;
+    }
+
+    .producto{
+        border: 2px solid rgb(71, 0, 84);
+
+    }
+
+    .producto h3{
+        font-size: 25px;
+        letter-spacing: 1px;
+        margin: 5px 0;
+    }
+
+    .producto p{
+        font-weight: 500;
+        font-size: 25px;
+        padding: 5px;
+    }
+
+    .categorias-productos h2{
+        font-size: 30px;
+        letter-spacing: 3px;
+        margin: 0 20px 25px;
+    }
+
+    /* ---------- MAIN CONTACTO ---------- */
+    .linea-contacto{
+        width: 100%;
+    }
+
+    .titulo-contacto{
+        font-size: 35px;
+        letter-spacing: 5px;
+    }
+
+    .icono-contacto{
+        height: 40px;
+    }
+
+    .insertar-formulario, .insertar-formulario-mensaje{
+        font-size: 25px;
+    }
+
+    .datos-contacto-y-formulario, a{
+        font-size: 25px;
+        line-height: 80px;
+        letter-spacing: 3px;
+    }
+
+    .formulario-contacto{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        flex-grow: 1;
+    }
+
+    .insertar-formulario{
+        display: grid;
+        grid-template-columns: 1fr;
+        flex-grow: 1;
+    }
+
+    .contenedor-formulario{
+        gap: 20px;
+    }
+
+    /* ---------- MAIN COMPRAR ---------- */
+    .comprar h1, .contenedor-preguntas h1{
+        font-size: 35px;
+    }
+
+    .comprar, .contenedor-preguntas{
+    padding: 30px 25px 10px 30px;
+    }
+
+    .pasos-comprar ol li{
+        font-size: 30px;
+        line-height: 35px;
+        padding-bottom: 30px;
+    }
+}
+
+/* MQ ESTILOS PARA DESKTOP */
+@media screen and (min-width: 1024px){
+    /* ---------- HEADER ---------- */ 
+    .contenido-header{
+        display: flex;
+        justify-content: -between;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    /* logo */
+    .logo{
+       display: flex;
+       flex: 1;
+       text-align: left; 
+    }
+
+    .logo img{
+        height: 100px;
+    }
+    
+    /* menú */
+    .menu-navegacion{
+        display: block;
+    }
+
+    .titulo-navegacion{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .titulo-navegacion li a{
+        color: rgb(71, 0, 84);
+        font-weight: bold;
+        font-size: 18px;
+    }
+    
+    .menu-desplegable button, .menu-desplegable ul li a{
+        display: none;
+    }
+    
+    .custom-dropdown::after{ /* flecha */
+        display: none; /* ocultar la flecha predeterinada con ::after */
+    }
+    
+    /* buscador desplegable */
+    .buscador-desplegable button{
+        display: none;
+    }  
+    
+    .contenedor-buscador-barra{
+        display: block;
+        text-align: right;
+    }
+
+    .bi-search{  /* lupa */
+        height: 35px;
+        width: auto;    
+        color: rgb(71, 0, 84);
+    } 
+
+    .input-group{
+        position: relative;
+        width: 300px;
+    }
+
+    .icono-lupa{
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        transform: translateY(-50%);
+        color: rgb(71, 0, 84);
+    }
+
+    .formulario-buscar{
+        width: 100%;
+        padding-left: 35px;
+        padding-right: 10px;
+        height: 45px;
+        border-radius: 50px;
+        border: 3px solid rgb(71, 0, 84);
+    }
+
+    /* ---------- FOOTER ---------- */  
+    .contenedor-footer{
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-content: space-between;
+    }
+
+    /* estilos para el acordion del footer */ 
+    .footer-enlaces li, .footer-enlaces a{
+        font-size: 17px;
+        font-weight: 600;
+        letter-spacing: 2px;
+    }
+    
+    .logo-footer{
+        text-align: right;
+        margin: 15px;
+        width: 10%;
+    }
+    
+    .logo-footer img{
+        width: 100px;
+        margin: 3%;
+        align-items: center;
+    }
+    
+    .accordion-item{
+        display: none;
+    }
+    
+    /* secciones footer */
+    .opciones-footer-desktop ul{
+        display: block;
+        display: flex;
+        width: 80%;
+    }
+
+    .secciones-footer h1, .seguinos h3{
+        color: rgb(71, 0, 84);
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+    }
+
+    .footer-enlaces{
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* estilos para la seccion follow us */
+    .seguinos{
+        display: flex;
+        text-align: center;
+        width: 40%;
+    }
+
+    .seguinos h3{
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 100%;
+        letter-spacing: 2px;
+        margin: 10% 0 5% 0;
+    }
+    
+    .redes-sociales{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 5% 6% 10% 6%;
+        column-gap: 5px;
+        justify-items: center;
+    }
+    
+    .accordion-item button{
+        color: rgb(71, 0, 84);
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+
+
+    /* .footer-contenedor{
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+    } */
+
+    /* .footer-section{
+        width: 25%;
+    } */
+
+    /* .footer-section h2{
+        font-size: 15px;
+    } */
+
+    /* redes sociales */
+    .bi-whatsapp, .bi-instagram, .bi-envelope-at{
+        color: rgb(71, 0, 84);
+        height: 35px;
+        width: auto;
+    }
+
+    /* footer{
+        text-align: center;
+        padding: 20px;
+        clear: both;
+        margin-top: auto;
+        background-color: #fab9f6;
+        color: rgb(71, 0, 84);
+        width: 100%;
+        border-top: 2px solid rgb(71, 0, 84);
+    }
+
+    .footer-section, .logo-footer{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+
+    }
+
+    .logo-footer img{
+        width: 80px;
+        height: auto;
+        display: flex;
+        margin-left: auto; 
+
+    }
+
+    .footer-enlaces li, a{
+        list-style: none;
+        text-decoration: none;
+        color: rgb(71, 0, 84);
+    } */
+
+    /* .footer-contenedor {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .footer-section {
+        flex: 1;
+        margin: 10px;
+        min-width: ;
+    }
+
+    .footer-section h2{
+        color: rgb(71, 0, 84);
+        font-size: 14px;
+        text-transform: initial;
+        font-weight:900;
+    }
+
+    .footer-section ul{
+        list-style: none;
+        padding: 0;
+    }
+
+    .footer-section li{
+        margin-bottom: 8px;
+    }
+
+    .footer-section a , .a2{
+        color: rgb(71, 0, 84);
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .logo-footer{
+        align-self: center;
+
+    }
+
+    .logo-footer img{
+        width: 80px;
+        height: auto;
+        display: flex;
+        align-self: center;
+        justify-content: center;
+        margin-left: auto; 
+    }
+
+    /* ---------- MAIN INICIO ---------- */ 
+    .mas-vendidos h1 {
+        font-size: 25px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 700;
+    }
+
+    .productos{
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1%;
+        row-gap: 2%;
+    }
+    
+    .productos img{
+        width: 230px;
+        height: auto;
+    }
+
+    /* ---------- MAIN PRODUCTOS ---------- */
+
+
+    .main-productos h1{
+        margin: 5%;
+        font-size: 25px;
+        letter-spacing: 3px;
+    }
+
+    .filtro-categorias-y-productos{
+        display: grid;
+        grid-template-columns: 15% 1fr;
+    }
+
+    .contorno-catalogo{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 0;
+    } 
+
+    .producto {
+        width: 200px;
+        height: auto;
+        
+    }
+
+    .categorias-productos h2{
+        font-size: 20px;
+    }
+
+    /* ---------- MAIN COMPRAR ---------- */
+    .comprar h1, .contenedor-preguntas-frecuentes h1{
+        font-size: 40px;
+    }
+
+    .pasos-comprar ol li{
+        font-size: 30px;
+    }
+
+    /* ---------- MAIN PREGUNTAS FRECUENTES ---------- */
+    .contenedor-preguntas-frecuentes h1{
+        padding-top: 4%;
+        padding-bottom: 2%;
+        margin: 0;
+    }
+
+    .conjunto-pregunta{
+        gap: 5px;
+    }
+
+    .pregunta{
+        font-size: 30px;
+    }
+
+    .respuesta{
+        font-size: 25px;
+    }
+
+    /* ---------- MAIN CONTACTO ---------- */
+    .main-contacto{
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+    }
+}/* --- RESET --- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ESTILOS PARA MOBILE */
+/* ---------- BODY ---------- */
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+/* ---------- MAIN GENERAL ---------- */
+main{
+    flex-grow: 1;  /* hace que el contenido crezca sinempujar el footer */
+    flex: 1;
+    width: 100%;
+    background-color: rgb(252, 233, 255);
+}
+
+/* ---------- HEADER ---------- */
+header{
+    display: flex;
+    padding: 1% 2%;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #fab9f6;
+    border-bottom: 2px solid rgb(71, 0, 84);
+    flex-wrap: wrap;  /* hace que se acomoden los elementos  sino hay espacio */
+    flex-direction: column;
+}
+
+.contenido-header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 1%;
+    align-items: center;
+}
+
+.titulo-menu{
+    font-size: 100%;
+}
+
+/* logo */
+.logo img{
+    display: flex;
+    height: 50px;
+}
+
+/* menú */
+.menu-navegacion{
+    display: none;
+}
+
+.menu-desplegable button, .menu-desplegable ul li a{
+    text-align: center;
+    font-weight: 600;
+    color: rgb(71, 0, 84);
+}
+
+.menu-desplegable ul li a{
+    font-weight: 500;
+}
+
+.custom-dropdown::after{ /* flecha */
+    display: none; /* ocultar la flecha predeterinada con ::after */
+}
+
+.flecha-menu{ /* flecha menu */
+    width: 35%;
+    height: auto;
+}
+
+/* buscador desplegable */
+.buscador-desplegable button{
+    padding: 1%;
+    display: flex;
+    align-content: center;
+    background-color: transparent;
+    border: none;
+}
+
+ .bi-search{  /* lupa */
+    height: 30px;
+    width: auto;    
+    color: rgb(71, 0, 84);
+}
+
+.contenedor-buscador-barra{
+    display: none;
+}
+
+/* .buscar{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: ; */
+    /* margin: 40px 60px; */
+/* } */
+
+/* .buscar input{
+    font-size: 12px;
+    padding: 2px;
+    border: 1px solid beige;
+    border-radius: 5px;
+} */
+
+/* ---------- FOOTER ---------- */
+footer{
+    display: flex;
+    flex-direction: column;
+    clear: both;
+    background-color: #fab9f6;
+}
+
+/* estilos para el acordion del footer */
+.accordion-item{
+    border: none;
+    border-bottom: 1px solid rgb(71, 0, 84);
+    background-color: transparent;
+    border-top: 1px solid rgb(71, 0, 84);
+}
+
+.accordion-button{
+    background-color: transparent;
+    padding: 5%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-enlaces li, .footer-enlaces a{
+    list-style: none;
+    color: rgb(137, 62, 151);
+    font-size: 100%;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+
+.logo-footer{
+    text-align: center;
+    margin: 0;
+}
+
+.logo-footer img{
+    width: 20%;
+    height: auto;
+    margin: 3%;
+}
+
+.flecha-footer{
+    display: none;
+}
+
+.accordion-button::after{
+    display: none;
+    
+}
+
+/* transicion al icono para una rotacion suave */
+.accordion-button svg{
+    transition: transform 0.3s ease;
+}
+
+/* cuando el acordeon esté abierto gira el icono 90° */
+.accordion-button:not(.collapsed) svg{
+    transform: rotate(90deg);
+}
+
+.flecha-footer{
+    display: inline-block;
+    vertical-align: middle;
+    justify-content: space-between;
+    width: 8%;
+    height: auto;
+    color: rgb(71, 0, 84);
+}
+
+/* estilos para la seccion follow us */
+.seguinos{
+    display: flex;
+    flex-direction: column;
+}
+
+.seguinos h3{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 100%;
+    letter-spacing: 2px;
+    margin: 10% 0 5% 0;
+}
+
+.redes-sociales{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 5% 6% 10% 6%;
+    column-gap: 5px;
+    justify-items: center;
+}
+
+.accordion-item button{
+    color: rgb(71, 0, 84);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+/* .footer-contenedor{
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+} */
+
+/* .footer-section{
+    width: 25%;
+} */
+
+/* .footer-section h2{
+    font-size: 15px;
+} */
+
+/* redes sociales */
+.bi-whatsapp, .bi-instagram, .bi-envelope-at{
+    color: rgb(71, 0, 84);
+    height: 35px;
+    width: auto;
+}
+
+/* footer{
+    text-align: center;
+    padding: 20px;
+    clear: both;
+    margin-top: auto;
+    background-color: #fab9f6;
+    color: rgb(71, 0, 84);
+    width: 100%;
+    border-top: 2px solid rgb(71, 0, 84);
+}
+
+.footer-section, .logo-footer{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+}
+
+.logo-footer img{
+    width: 80px;
+    height: auto;
+    display: flex;
+    margin-left: auto; 
+
+}
+
+.footer-enlaces li, a{
+    list-style: none;
+    text-decoration: none;
+    color: rgb(71, 0, 84);
+} */
+
+/* .footer-contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+    min-width: ;
+}
+
+.footer-section h2{
+    color: rgb(71, 0, 84);
+    font-size: 14px;
+    text-transform: initial;
+    font-weight:900;
+}
+
+.footer-section ul{
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section li{
+    margin-bottom: 8px;
+}
+
+.footer-section a , .a2{
+    color: rgb(71, 0, 84);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.logo-footer{
+    align-self: center;
+
+}
+
+.logo-footer img{
+    width: 80px;
+    height: auto;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    margin-left: auto; 
+}
+
+/* ---------- MAIN INICIO ---------- */
+.main-inicio{
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.mas-vendidos h1 {
+    margin: 20px 0;
+    text-align: left;
+    color: black;
+    text-transform:initial;
+    font-size: 18px;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.productos{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    justify-items: center;
+    gap: 2%;
+    row-gap: 1%; 
+    max-width: 100%;
+    padding: 0%;
+}
+
+.seccion-produtos{
+    text-align: center;
+}
+
+.productos img{
+    width: 175px;
+    height: auto;
+    max-width: 350px;
+    border-radius: 10px;
+    border: 2px solid rgb(71, 0, 84);
+}
+
+/* ---------- MAIN COMPRAR ---------- */
+.categorias h2{
+    text-align: left;
+}
+
+.comprar, .contenedor-preguntas-frecuentes{
+    align-content: center;
+    background-color: rgb(255, 255, 255);
+    margin: 5%;
+    padding: 0 25px 0 15px;
+    border: 2px solid rgb(71, 0, 84);
+    border-radius: 15px;
+    overflow: hidden;  /* evita que el texto se salga del contenedor */
+}   
+
+.comprar h1, .contenedor-preguntas-frecuentes h1{
+    text-align: center;
+    padding: 15px;
+    margin: 0;
+    margin-bottom: 2px;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.pasos-comprar ol li{
+    margin: 5px;
+}
+
+/* ---------- MAIN PREGUNTAS FRECUENTES ---------- */
+.contenedor-preguntas-frecuentes h1{
+    padding: 0;
+    padding-top: 10%;
+    text-align: center;
+    margin-left: 15px;
+    margin-bottom: 25px;
+}
+
+ .conjunto-pregunta{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    text-align: justify;
+    line-height: 100%;
+    font-weight: 300;
+    margin: 10px 0 3px 0;
+}
+
+.pregunta{
+    font-size: 17px;
+    text-align: left;
+}
+
+.respuesta{
+    font-size: 16px;
+    text-align: justify;
+}
+
+/* .comprar{
+    align-content: center;
+    background-color: rgb(255, 255, 255);
+    margin: 0 150px;
+    border: 2px solid rgb(71, 0, 84);
+    border-radius: 15px;
+}
+
+.comprar li{
+    text-align: justify;
+    align-content: center;
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 160%;
+    margin: 20px 60px;
+} */
+
+/* ---------- MAIN PRODUCTOS ---------- */
+.main-productos{
+    background-color: white;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.main-productos h1{
+    margin: 6% 5% 3%;
+    text-transform: uppercase;
+    font-size: 23px;
+    font-weight: 700;
+    text-align: left;
+}
+
+.contorno-catalogo{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 6px;
+    row-gap: 6px;
+    margin: 5px 20px 25px;
+} 
+
+.producto{
+    border: 1px solid rgb(71, 0, 84);
+    border-radius: 8px;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    background-color: rgb(252, 233, 255);
+}
+
+/* .producto{
+
+    width: 100%;
+    display: grid;
+    margin: 50px;
+    grid-template-columns: repeat(2,1fr);
+    padding: 50px;
+}*/
+
+.producto img{
+    width: 100%;  /* la imagen occupa el 100% del contenedor */
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 8px 8px 0 0;
+} 
+
+.producto h3{
+    font-size: 15px;
+    font-weight: 600;
+    padding: 3px;
+    margin-bottom: 5px;
+}
+
+.producto p{
+    line-height: 25px;
+    font-weight: 500;
+}
+
+.categorias-productos{
+    text-align: left;
+}
+
+.categorias-productos h2{
+    font-size: 17px;
+    text-align: left;
+    font-weight: 600;
+    margin: 0 0 3% 5%;
+}
+
+.categorias-detalladas ul{
+    display: none;
+}
+
+
+/* descomentar cuando sean enlace con a los li */
+/* .categorias-detalladas a{
+    color: black;
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid rgb(71, 0, 84);
+    border-radius: 5px;
+} */
+
+/* .categorias-detalladas ul{
+    display: none;
+} */
+
+/* .categorias{
+    border: 2px solid rgb(71, 0, 84);
+    border-radius: 10px;
+    /* margin: 0 650px; */
+/*  float: left;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.categorias h2{
+    margin-bottom: 15px;
+}
+
+.categorias ul{
+    list-style-type: none;
+}
+
+.categorias ul li{
+    margin: 10px 0;
+}
+
+.categorias ul li a{
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.categorias ul li a:hover{
+    color: blue;
+} */
+
+/* ---------- MAIN PREGUNTAS ---------- */
+/* .contenedor-preguntas{
+    text-align: justify;
+    align-content: center;
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 160%;
+    margin: 40px 220px;
+    background-color: white;
+    border: 2px solid rgb(71, 0, 84);
+    border-radius: 10px;
+    list-style-type: none;
+} */
+/* no funciona */
+/* .conjunto-pegunta{
+    margin-bottom: 20px;
+}
+
+.pregunta{
+    text-align: justify;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    margin: 8px 50px;
+    line-height: 1.1;
+}
+
+.respuesta{
+    text-align: justify;
+    align-content: center;
+    font-size: 17px;
+    line-height: 1.2;
+    margin-bottom: 5px;
+    margin: 20px 60px;
+    font-weight: 400;
+}
+
+.respuesta , .pregunta{
+    list-style-type: none;
+} */
+
+/* ---------- MAIN CONTACTO ---------- */
+.main-contacto{
+    background-color: white;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: left;
+    padding: 2%;
+}
+
+.contenedor-contacto{
+    margin: 5%;
+} 
+
+.datos-contacto{
+    padding: 0 0 7% 0;
+    text-align: left;
+}
+
+.linea-contacto{
+    border-bottom: 2px solid rgb(71, 0, 84);
+    width: 60%;
+    margin: 5% auto 0;
+}
+
+.titulo-contacto{
+    color: black;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.datos-contacto p, .datos-contacto-y-formulario{
+    text-align: left;
+    width: 100%;
+    margin: 0;
+}
+
+/* icono */
+.icono-contacto{
+    color: rgb(71, 0, 84);
+    height: 20px;
+    width: auto;
+    padding-right: 15px;
+}
+
+.datos-contacto-y-formulario, a{
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 40px;
+    text-align: left;
+}
+
+.titulo-contacto{
+    color: black;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+/* formulario contacto */
+.formulario-contacto{
+    width: 100%;
+}
+
+.formulario-contacto p{
+    padding-top: 1%;
+}
+
+.contenedor-formulario{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.insertar-formulario{
+    width: 100%;
+}
+
+.insertar-formulario-mensaje input{
+    width: 206%;
+}
+
+
+
+
+
+
+
+/* .contacto a , .titulo-contacto{
+    color: black;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+} */
+
+/* .contacto li{
+    list-style-type: none;
+    margin-bottom: 10px;
+} */
+
+/* .contorno-formulario h2{
+    padding: 3%;
+    margin-inline-start: 5%;
+    color: black;
+    text-transform:initial;
+} */
+
+
+/* MQ ESTILOS PARA TABLET */
+@media screen and (min-width:600px){
+    /* ---------- HEADER ---------- */  
+    .menu-navegacion{
+        display: none;
+    }
+
+    .menu-contenedor{
+        display: none;
+    }
+
+    .logo img{
+        height: 100px;
+    }
+
+    .menu-desplegable button, .menu-desplegable ul li a{
+        font-size: 30px;
+    }
+
+    .bi-search{
+        height: 40px;
+        width: auto;
+    }
+
+    .form-control{
+        height: auto;
+        width: fit-content !important;
+        font-size: 25px;
+        white-space: nowrap;
+        padding: auto;
+        border: 2px solid rgb(71, 0, 84);
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer-enlaces li, .footer-enlaces a{
+        font-size: 150%;
+        letter-spacing: 5px;
+    }
+
+    .logo-footer img{
+        width: 15%;
+    }
+
+    .flecha-footer{
+        width: 5%;
+    }
+
+    .seguinos h3{
+        font-size: 200%;
+        letter-spacing: 4px;
+        margin: 5% 0 3% 0;
+    }
+
+    .bi-whatsapp, .bi-instagram, .bi-envelope-at{
+        height: 48px;
+        width: auto;
+    }
+
+    .accordion-item button{
+       font-size: 20px;
+       letter-spacing: 5px;
+    }
+
+    /* ---------- MAIN INICIO ---------- */
+    .mas-vendidos h1 {
+        margin: 5px 0;
+        font-size: 28px;
+        letter-spacing: 2px;
+        padding: 25px 0;
+    }
+
+    .productos{
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        justify-items: center;
+        gap: 2%;
+        row-gap: 1%; 
+    }
+
+    .productos img{
+        width: 500px;
+        height: auto;
+    }
+
+    /* ---------- MAIN PREGUNTAS FRECUENTES ---------- */  
+    .contenedor-preguntas-frecuentes h1{
+        font-size: 35px;
+    }
+
+    .pregunta{
+        font-size: 25px;
+        font-weight: 600;
+    }
+
+    .respuesta{
+        font-size: 25px;
+        line-height: 35px;
+    }
+
+    /* ---------- MAIN PRODUCTOS ---------- */
+    .main-productos h1{
+        margin: 25px 20px;
+        font-size: 35px;
+        letter-spacing: 5px;
+    }
+
+    .contorno-catalogo{
+        gap: 15px;
+        row-gap: 15px;
+    }
+
+    .producto{
+        border: 2px solid rgb(71, 0, 84);
+
+    }
+
+    .producto h3{
+        font-size: 25px;
+        letter-spacing: 1px;
+        margin: 5px 0;
+    }
+
+    .producto p{
+        font-weight: 500;
+        font-size: 25px;
+        padding: 5px;
+    }
+
+    .categorias-productos h2{
+        font-size: 30px;
+        letter-spacing: 3px;
+        margin: 0 20px 25px;
+    }
+
+    /* ---------- MAIN CONTACTO ---------- */
+    .linea-contacto{
+        width: 100%;
+    }
+
+    .titulo-contacto{
+        font-size: 35px;
+        letter-spacing: 5px;
+    }
+
+    .icono-contacto{
+        height: 40px;
+    }
+
+    .insertar-formulario, .insertar-formulario-mensaje{
+        font-size: 25px;
+    }
+
+    .datos-contacto-y-formulario, a{
+        font-size: 25px;
+        line-height: 80px;
+        letter-spacing: 3px;
+    }
+
+    .formulario-contacto{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        flex-grow: 1;
+    }
+
+    .insertar-formulario{
+        display: grid;
+        grid-template-columns: 1fr;
+        flex-grow: 1;
+    }
+
+    .contenedor-formulario{
+        gap: 20px;
+    }
+
+    /* ---------- MAIN COMPRAR ---------- */
+    .comprar h1, .contenedor-preguntas h1{
+        font-size: 35px;
+    }
+
+    .comprar, .contenedor-preguntas{
+    padding: 30px 25px 10px 30px;
+    }
+
+    .pasos-comprar ol li{
+        font-size: 30px;
+        line-height: 35px;
+        padding-bottom: 30px;
+    }
+}
+
+/* MQ ESTILOS PARA DESKTOP */
+@media screen and (min-width: 1024px){
+    /* ---------- HEADER ---------- */ 
+    .contenido-header{
+        display: flex;
+        justify-content: -between;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    /* logo */
+    .logo{
+       display: flex;
+       flex: 1;
+       text-align: left; 
+    }
+
+    .logo img{
+        height: 100px;
+    }
+    
+    /* menú */
+    .menu-navegacion{
+        display: block;
+    }
+
+    .titulo-navegacion{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .titulo-navegacion li a{
+        color: rgb(71, 0, 84);
+        font-weight: bold;
+        font-size: 18px;
+    }
+    
+    .menu-desplegable button, .menu-desplegable ul li a{
+        display: none;
+    }
+    
+    .custom-dropdown::after{ /* flecha */
+        display: none; /* ocultar la flecha predeterinada con ::after */
+    }
+    
+    /* buscador desplegable */
+    .buscador-desplegable button{
+        display: none;
+    }  
+    
+    .contenedor-buscador-barra{
+        display: block;
+        text-align: right;
+    }
+
+    .bi-search{  /* lupa */
+        height: 35px;
+        width: auto;    
+        color: rgb(71, 0, 84);
+    } 
+
+    .input-group{
+        position: relative;
+        width: 300px;
+    }
+
+    .icono-lupa{
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        transform: translateY(-50%);
+        color: rgb(71, 0, 84);
+    }
+
+    .formulario-buscar{
+        width: 100%;
+        padding-left: 35px;
+        padding-right: 10px;
+        height: 45px;
+        border-radius: 50px;
+        border: 3px solid rgb(71, 0, 84);
+    }
+
+    /* ---------- FOOTER ---------- */  
+    .contenedor-footer{
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-content: space-between;
+    }
+
+    /* estilos para el acordion del footer */ 
+    .footer-enlaces li, .footer-enlaces a{
+        font-size: 17px;
+        font-weight: 600;
+        letter-spacing: 2px;
+    }
+    
+    .logo-footer{
+        text-align: right;
+        margin: 15px;
+        width: 10%;
+    }
+    
+    .logo-footer img{
+        width: 100px;
+        margin: 3%;
+        align-items: center;
+    }
+    
+    .accordion-item{
+        display: none;
+    }
+    
+    /* secciones footer */
+    .opciones-footer-desktop ul{
+        display: block;
+        display: flex;
+        width: 80%;
+    }
+
+    .secciones-footer h1, .seguinos h3{
+        color: rgb(71, 0, 84);
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+    }
+
+    .footer-enlaces{
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* estilos para la seccion follow us */
+    .seguinos{
+        display: flex;
+        text-align: center;
+        width: 40%;
+    }
+
+    .seguinos h3{
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 100%;
+        letter-spacing: 2px;
+        margin: 10% 0 5% 0;
+    }
+    
+    .redes-sociales{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 5% 6% 10% 6%;
+        column-gap: 5px;
+        justify-items: center;
+    }
+    
+    .accordion-item button{
+        color: rgb(71, 0, 84);
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+
+
+    /* .footer-contenedor{
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+    } */
+
+    /* .footer-section{
+        width: 25%;
+    } */
+
+    /* .footer-section h2{
+        font-size: 15px;
+    } */
+
+    /* redes sociales */
+    .bi-whatsapp, .bi-instagram, .bi-envelope-at{
+        color: rgb(71, 0, 84);
+        height: 35px;
+        width: auto;
+    }
+
+    /* footer{
+        text-align: center;
+        padding: 20px;
+        clear: both;
+        margin-top: auto;
+        background-color: #fab9f6;
+        color: rgb(71, 0, 84);
+        width: 100%;
+        border-top: 2px solid rgb(71, 0, 84);
+    }
+
+    .footer-section, .logo-footer{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+
+    }
+
+    .logo-footer img{
+        width: 80px;
+        height: auto;
+        display: flex;
+        margin-left: auto; 
+
+    }
+
+    .footer-enlaces li, a{
+        list-style: none;
+        text-decoration: none;
+        color: rgb(71, 0, 84);
+    } */
+
+    /* .footer-contenedor {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .footer-section {
+        flex: 1;
+        margin: 10px;
+        min-width: ;
+    }
+
+    .footer-section h2{
+        color: rgb(71, 0, 84);
+        font-size: 14px;
+        text-transform: initial;
+        font-weight:900;
+    }
+
+    .footer-section ul{
+        list-style: none;
+        padding: 0;
+    }
+
+    .footer-section li{
+        margin-bottom: 8px;
+    }
+
+    .footer-section a , .a2{
+        color: rgb(71, 0, 84);
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .logo-footer{
+        align-self: center;
+
+    }
+
+    .logo-footer img{
+        width: 80px;
+        height: auto;
+        display: flex;
+        align-self: center;
+        justify-content: center;
+        margin-left: auto; 
+    }
+
+    /* ---------- MAIN INICIO ---------- */ 
+    .mas-vendidos h1 {
+        font-size: 25px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 700;
+    }
+
+    .productos{
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1%;
+        row-gap: 2%;
+    }
+    
+    .productos img{
+        width: 230px;
+        height: auto;
+    }
+
+    /* ---------- MAIN PRODUCTOS ---------- */
+
+
+    .main-productos h1{
+        margin: 5%;
+        font-size: 25px;
+        letter-spacing: 3px;
+    }
+
+    .filtro-categorias-y-productos{
+        display: grid;
+        grid-template-columns: 15% 1fr;
+    }
+
+    .contorno-catalogo{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 0;
+    } 
+
+    .producto {
+        width: 200px;
+        height: auto;
+        
+    }
+
+    .categorias-productos h2{
+        font-size: 20px;
+    }
+
+    /* ---------- MAIN COMPRAR ---------- */
+    .comprar h1, .contenedor-preguntas-frecuentes h1{
+        font-size: 40px;
+    }
+
+    .pasos-comprar ol li{
+        font-size: 30px;
+    }
+
+    /* ---------- MAIN PREGUNTAS FRECUENTES ---------- */
+    .contenedor-preguntas-frecuentes h1{
+        padding-top: 4%;
+        padding-bottom: 2%;
+        margin: 0;
+    }
+
+    .conjunto-pregunta{
+        gap: 5px;
+    }
+
+    .pregunta{
+        font-size: 30px;
+    }
+
+    .respuesta{
+        font-size: 25px;
+    }
+
+    /* ---------- MAIN CONTACTO ---------- */
+    .main-contacto{
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+    }
+}
