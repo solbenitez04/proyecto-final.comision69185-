@@ -1,0 +1,85 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixin';
+
+.main-contacto{
+    background-color: $background-white;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: left;
+    padding: $padding-sm;
+}
+
+.contenedor-contacto{
+    margin: $margin-medio;
+} 
+
+.datos-contacto{
+    padding: 0 0 $padding-sm 0;
+    text-align: left;
+}
+
+.linea-contacto{
+    border-bottom: $border-md solid $color-texto-footer-main;
+    width: 60%;
+    margin: $margin-medio auto 0;
+}
+
+.datos-contacto p, .datos-contacto-y-formulario{
+    text-align: left;
+    width: 100%;
+    margin: 0;
+}
+
+/* icono */
+.icono_formulario{
+    color: $color-texto-footer-main;
+    height: 30px;
+    width: auto;
+    padding-right: $padding-md;
+}
+
+.datos-contacto-y-formulario, a{
+    list-style: none;
+    text-decoration: none;
+    color: $color-texto-footer-main;
+    font-size: $font-md;
+    font-weight: 500;
+    line-height: 40px;
+    text-align: left;
+}
+
+.titulo-contacto{
+    color: $color-texto-footer-main;
+    font-weight: 700;
+    font-size: $font-lg;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+/* formulario contacto */
+.formulario-contacto{
+    width: 100%;
+    p{
+        margin-top: $margin-medio;
+    }
+}
+
+.contenedor-formulario{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $gap-sm;
+}
+
+.insertar-formulario{
+    width: 100%;
+    color: $color-texto-footer-main;
+}
+
+.insertar-formulario-mensaje{
+    color: $color-texto-footer-main;
+}
+
+.insertar-formulario-mensaje input{
+    width: 206%;
+}

@@ -1,0 +1,30 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixin';
+
+.categorias h2{
+    text-align: left;
+}
+
+.comprar, .contenedor-preguntas-frecuentes{
+    align-content: center;
+    background-color: $background-contenedor;
+    margin: $margin-chico;
+    padding: 0 $padding-lg 0 $padding-md;
+    border: $border-md solid $color-texto-footer-main;
+    border-radius: 15px;
+    overflow: hidden;  /* evita que el texto se salga del contenedor */
+}   
+
+.comprar h1, .contenedor-preguntas-frecuentes h1{
+    text-align: center;
+    padding: $border-radius-lg;
+    margin: 0;
+    margin-bottom: $margin-sm;
+    font-size: $font-lg;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.pasos-comprar ol li{
+    margin: $margin-sm;
+}

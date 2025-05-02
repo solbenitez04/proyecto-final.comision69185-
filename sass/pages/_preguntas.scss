@@ -1,0 +1,33 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixin';
+
+.contenedor-preguntas-frecuentes h1{
+    padding: 0;
+    padding-top: $padding-md;
+    text-align: center;
+    margin-left: $margin-chico;
+    margin-bottom: $margin-medio;
+}
+
+ .conjunto-pregunta{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: $gap-sm;
+    text-align: justify;
+    line-height: 100%;
+    
+    margin: $margin-chico 0 $margin-sm 0;
+}
+
+.pregunta{
+    font-size: $font-md;
+    font-weight: 600;
+    text-align: left;
+}
+
+.respuesta{
+    font-size: $font-md;
+    text-align: justify;
+    font-weight: 300;
+}

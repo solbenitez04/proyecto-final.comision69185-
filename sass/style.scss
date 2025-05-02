@@ -1,0 +1,32 @@
+@use 'abstracts/variables';
+@use 'abstracts/mixin';
+
+// reset
+@use 'base/reset';
+
+// body
+@use 'layout/body';
+
+// header
+@use 'layout/header';
+
+// main home
+@use 'pages/home';
+
+// min productos
+@use 'pages/productos';
+
+// main comprar
+@use 'pages/comprar';
+
+// main contacto
+@use 'pages/contacto';
+
+// main preguntas frecuentes
+@use 'pages/preguntas';
+
+// footer
+@use 'layout/footer';
+
+// mq tablet
+@use 'layout/mqtablet';

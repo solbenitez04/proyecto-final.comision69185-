@@ -1,0 +1,205 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixin';
+
+// mq tablet
+@media screen and (min-width:600px){
+    /* ---------- HEADER ---------- */  
+    .contenido-header{
+        div{
+            a{
+                img{
+                    @include medidas (130px, auto);
+                }
+            }
+        }
+    }
+    
+    // titulo menú
+    .titulo-menu{
+        @include fonts ($font-xl, $color-texto-footer-main, 600, none, none);
+    }
+    
+    // flecha menú visible
+    .flecha-menu{
+        @include medidas (35px, auto);
+    }
+
+// ---------- FOOTER ----------
+    // logo
+    .logo-footer{
+        text-align: center;
+        img{
+            margin: $margin-chico;
+            @include medidas (180px, auto);
+        }
+    }
+    
+    // estilos para el botón del acordion del footer
+    .accordion-item{
+        border: none;
+        border-bottom: $border-lg solid $color;
+        border-top: $border-lg solid $color;
+    }
+    
+    .accordion-button{
+        font-size: $font-lg;
+    }
+    
+    // contenido del accordion
+    .footer-enlaces{
+        li{
+            a{
+                font-size: $font-lg;
+            }
+        }
+    }
+    
+    .a2{
+        font-size: $font-lg;
+    }
+    
+    // flecha accordion
+    .flecha-footer{
+        @include medidas (40px, auto);
+    }
+    
+    /* estilos para la seccion follow us */
+    .seguinos{
+        h3{
+            font-weight: 700;
+            font-size: $font-xl;
+        }
+    }
+    
+    // redes sociales
+    .bi-whatsapp, .bi-instagram, .bi-envelope-at{
+        display: flex;
+        @include medidas (auto, 45px);
+    }
+
+    /* ---------- MAIN HOME ---------- */
+    .mas-vendidos h1 {
+        @include fonts ($font-xl, $color-texto-general, 700, none, none);
+    }
+    
+    .productos{
+        grid-template-columns: repeat(3, 1fr);
+        gap: $gap-md;
+        row-gap: $gap-md; 
+        margin-bottom: $margin-medio;
+        margin-left: $margin-medio;
+        margin-right: $margin-medio;
+    }
+    
+    .productos img{
+        width: 230px;
+        max-width: auto;
+        border-radius: $border-radius-xl;
+        border: $border-md solid $color-texto-footer-main;
+    }
+    /* ---------- MAIN PREGUNTAS FRECUENTES ---------- */  
+    .contenedor-preguntas-frecuentes h1{
+        font-size: 35px;
+    }
+
+    .pregunta{
+        font-size: 25px;
+        font-weight: 600;
+    }
+
+    .respuesta{
+        font-size: 25px;
+        line-height: 35px;
+    }
+
+    /* ---------- MAIN PRODUCTOS ---------- */
+    .main-productos h1{
+        margin: 25px 20px;
+        font-size: 35px;
+        letter-spacing: 5px;
+    }
+
+    .contorno-catalogo{
+        gap: 15px;
+        row-gap: 15px;
+    }
+
+    .producto{
+        border: 2px solid rgb(71, 0, 84);
+
+    }
+
+    .producto h3{
+        font-size: 25px;
+        letter-spacing: 1px;
+        margin: 5px 0;
+    }
+
+    .producto p{
+        font-weight: 500;
+        font-size: 25px;
+        padding: 5px;
+    }
+
+    .categorias-productos h2{
+        font-size: 30px;
+        letter-spacing: 3px;
+        margin: 0 20px 25px;
+    }
+
+    /* ---------- MAIN CONTACTO ---------- */
+    .linea-contacto{
+        width: 100%;
+    }
+
+    .titulo-contacto{
+        font-size: 35px;
+        letter-spacing: 5px;
+    }
+
+    .icono-contacto{
+        height: 40px;
+    }
+
+    .insertar-formulario, .insertar-formulario-mensaje{
+        font-size: 25px;
+    }
+
+    .datos-contacto-y-formulario, a{
+        font-size: 25px;
+        line-height: 80px;
+        letter-spacing: 3px;
+    }
+
+    .formulario-contacto{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        flex-grow: 1;
+    }
+
+    .insertar-formulario{
+        display: grid;
+        grid-template-columns: 1fr;
+        flex-grow: 1;
+    }
+
+    .contenedor-formulario{
+        gap: 20px;
+    }
+
+    /* ---------- MAIN COMPRAR ---------- */
+    .comprar h1, .contenedor-preguntas h1{
+        font-size: 35px;
+    }
+
+    .comprar, .contenedor-preguntas{
+    padding: 30px 25px 10px 30px;
+    }
+
+    .pasos-comprar ol li{
+        font-size: 30px;
+        line-height: 35px;
+        padding-bottom: 30px;
+    }
+}

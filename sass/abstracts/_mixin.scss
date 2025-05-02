@@ -1,0 +1,12 @@
+@mixin medidas ($width, $height){
+    width: $width;
+    height: $height;
+}
+
+@mixin fonts ($size, $color, $weight, $liststyle, $textdecoration){
+    font-size: $size;
+    color: $color;
+    font-weight: $weight;
+    list-style: none;
+    text-decoration: none;
+}

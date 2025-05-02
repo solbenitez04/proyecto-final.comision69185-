@@ -35,23 +35,7 @@
                     </ul>
                 </div>
             
-                <!-- buscador desplegable -->
-                <div class="dropdown buscador-desplegable">
-                    <button class="btn btn-light dropdown-toggle custom-dropdown"  type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-                          </svg>
-                    </button>
-                    <div class="dropdown-menu p-2">
-                        <div class="input-group despliegue-lupa">
-                            <input type="text" class="form-control" placeholder="Buscar productos...">
-                        </div>
-                    </div>
-                </div>
-
-                
-        
-                <!-- menu de navegacion -->
+                <!-- menu de navegacion desktop -->
                 <div class="menu-navegacion">
                     <nav class="menu">
                         <ul class="titulo-navegacion">
@@ -62,10 +46,10 @@
                             <li><a href="pages/contacto.html">Contacto</a></li>
                         </ul>
                     </nav>
-                    <!-- Buscador barra -->
+                    <!-- Buscador barra desktop -->
                     <div class="contenedor-buscador-barra">
                         <div class="input-group despliegue-lupa">
-                            <span class="icono-lupa">
+                            <span class="icono-lupa-desktop">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi      bi-search" viewBox="0 0 16 16">
                                     <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
                                 </svg>
@@ -76,9 +60,10 @@
                 </div>
             </div>
         </header>
-    
+                
+        <!-- ---------- MAIN ---------- -->
+
         <main class="main-inicio">
-            <!-- ---------- MAIN ---------- -->
             <div class="mas-vendidos">
                 <h1>Productos más vendidos</h1>
                 <section class="seccion-productos">
@@ -93,6 +78,8 @@
                         <img src="img/produco4.png" alt="Taza de cerámica  blanca con asa corazón personalizable">
                         <img src="img/producto3.png" alt="Taza de cerámica fluo personalizable">
                         <img src="img/produco4.png" alt="Taza de cerámica  blanca con asa corazón personalizable">
+                        <img src="img/producto1.png" alt="Taza de cerámica plateada personalizable">
+                        <img src="img/producto2.png" alt="Termo blanco personalizable">
                     </div>
                 </section>  
             </div> 
@@ -109,7 +96,6 @@
                 <div class="accordion">
                     <!-- seccion 1 -->
                     <div class="accordion-item">
-                        <h2 class="accordion-header">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                         Productos
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-compact-down flecha-footer" viewBox="0 0 16 16">
@@ -118,7 +104,7 @@
                         </button>
                     </h2>
                     <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
+                        <div>
                             <nav>
                                 <ul class="footer-enlaces">
                                     <li><a href="pages/productos.html">Tazas</a></li>

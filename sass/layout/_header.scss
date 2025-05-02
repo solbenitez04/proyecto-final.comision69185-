@@ -1,0 +1,83 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixin';
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: $gap-md;
+    background-color: $background-header-footer;
+    border-bottom: $border-lg solid $color-texto-footer-main;
+    position: relative;
+}
+
+.contenido-header{
+    div{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        a{
+            img{
+                @include medidas (80px, auto);
+            }
+        }
+    }
+}
+
+// titulo menú
+.titulo-menu{
+    @include fonts ($font-md, $color-texto-footer-main, 600, none, none);
+}
+
+// opciones del menú
+.menu-desplegable{
+    ul{
+        li{ 
+            a{
+                text-align: center;
+                font-weight: 500;
+                color: $color-texto-footer-main;
+            }
+        }
+    }
+}
+
+// ocultar flecha predeterminada
+.custom-dropdown::after{
+    display: none;
+}
+
+// flecha menú visible
+.flecha-menu{
+    @include medidas (25px, auto);
+}
+
+// buscador desplegable
+.buscador-desplegable{
+    button{
+        padding: 1%;
+        display: flex;
+        align-content: center;
+        background-color: transparent;
+        border: none;
+        svg{
+            color: $color;
+            @include medidas (auto, 50px);
+        }
+    }
+}
+
+// ocultar buscador y navegacion desktop
+.contenedor-buscador-barra{
+    display: none;
+}
+
+.menu-navegacion{
+    nav{
+        ul{
+            display: none;
+        }
+    }
+}

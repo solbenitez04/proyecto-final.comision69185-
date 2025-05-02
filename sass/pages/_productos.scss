@@ -1,0 +1,68 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixin';
+
+.main-productos{
+    background-color: white;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.main-productos h1{
+    margin: $margin-chico;
+    text-transform: uppercase;
+    font-size: $font-lg;
+    font-weight: 700;
+    text-align: left;
+}
+
+.contorno-catalogo{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: $gap-sm;
+    row-gap: $gap-sm;
+    margin: $margin-medio;
+} 
+
+.producto{
+    border: $border-md solid $color-texto-footer-main;
+    border-radius: $border-radius-md;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    background-color: $background-main;
+}
+
+.producto img{
+    width: 100%;  /* la imagen ocupa el 100% del contenedor */
+    height: auto;
+    margin-bottom: $margin-chico;
+    border-radius: $border-radius-md $border-radius-md 0 0;
+} 
+
+.producto h3{
+    font-size: $font-md;
+    font-weight: 600;
+    padding: $padding-sm;
+    margin-bottom: $margin-sm;
+}
+
+.producto p{
+    line-height: 25px;
+    font-weight: 500;
+}
+
+.categorias-productos{
+    text-align: left;
+}
+
+.categorias-productos h2{
+    font-size: $font-md;
+    text-align: left;
+    font-weight: 600;
+    margin: 0 0 $margin-chico $margin-chico;
+}
+
+.categorias-detalladas ul{
+    display: none;
+}

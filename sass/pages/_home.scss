@@ -1,0 +1,39 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixin';
+
+.main-inicio{
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.mas-vendidos h1 {
+    margin: $margin-medio auto;
+    text-align: center;
+    @include fonts ($font-lg, $color-texto-general, 700, none, none);
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.productos{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    gap: $gap-sm;
+    row-gap: $gap-sm; 
+    max-width: 100%;
+    margin-bottom: $margin-medio;
+}
+
+.seccion-produtos{
+    text-align: center;
+}
+
+.productos img{
+    width: 175px;
+    height: auto;
+    max-width: 350px;
+    border-radius: $border-xl;
+    border: $border-md solid $color-texto-footer-main;
+}

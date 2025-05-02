@@ -1,0 +1,130 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixin';
+
+footer{
+    display: flex;
+    flex-direction: column;
+    clear: both;
+    width: 100%;
+    background-color: $background-header-footer;
+}
+
+// logo
+.logo-footer{
+    text-align: center;
+    img{
+        margin: $margin-chico;
+        @include medidas (90px, auto);
+    }
+}
+
+// estilos para el botón del acordion del footer
+.accordion-item{
+    border: none;
+    border-bottom: $border-md solid $color;
+    border-top: $border-md solid $color;
+    background-color: transparent;
+    border-radius: 0;
+}
+
+.accordion-button{
+    background-color: transparent;
+    padding: $padding-md;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    font-size: $font-md;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: $color-texto-footer-main;
+}
+
+// contenido del accordion
+.footer-enlaces{
+    li{
+        list-style: none;
+        a{
+            list-style: none;
+            color: $color-texto-footer-main;
+            font-size: $font-md;
+            font-weight: 400;
+            letter-spacing: 2px;
+            text-decoration: none;
+            text-align: left;
+    
+        }
+    }
+}
+
+.a2{
+    list-style: none;
+    color: $color-texto-footer-main;
+    font-size: $font-md;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-align: left;
+}
+
+// secciones desktop
+.opciones-footer-desktop{
+    display: none;
+}
+
+.flecha-footer{
+    display: none;
+}
+
+.accordion-button::after{
+    display: none;
+}
+
+/* transicion al icono para una rotacion suave */
+.accordion-button svg{
+    transition: transform 0.3s ease;
+}
+
+/* cuando el accordion esté abierto gira el icono 90° */
+.accordion-button:not(.collapsed) svg{
+    transform: rotate(90deg);
+}
+
+// flecha accordion
+.flecha-footer{
+    display: inline-block;
+    vertical-align: middle;
+    justify-content: space-between;
+    color: $color-texto-footer-main;
+    @include medidas (25px, auto);
+}
+
+/* estilos para la seccion follow us */
+.seguinos{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    h3{
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: $font-md;
+        letter-spacing: 2px;
+        margin: $margin-medio 0;
+        color: $color-texto-footer-main;
+    }
+    div{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        text-align: center;
+        column-gap: $gap-sm;
+        margin: 5px $margin-medio $gap-md;
+    }
+}
+
+// redes sociales
+.bi-whatsapp, .bi-instagram, .bi-envelope-at{
+    color: $color-texto-footer-main;
+    @include medidas (auto, 30px);
+}
