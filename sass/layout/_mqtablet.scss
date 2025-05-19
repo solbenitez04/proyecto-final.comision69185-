@@ -30,7 +30,7 @@
         text-align: center;
         img{
             margin: $margin-chico;
-            @include medidas (180px, auto);
+            @include medidas (150px, auto);
         }
     }
     
@@ -50,12 +50,14 @@
         li{
             a{
                 font-size: $font-lg;
+                font-weight: 600;
             }
         }
     }
     
     .a2{
         font-size: $font-lg;
+        font-weight: 600;
     }
     
     // flecha accordion
@@ -75,10 +77,14 @@
     .bi-whatsapp, .bi-instagram, .bi-envelope-at{
         display: flex;
         @include medidas (auto, 45px);
+        align-content: center;
     }
 
     /* ---------- MAIN HOME ---------- */
     .mas-vendidos h1 {
+        letter-spacing: 10px;
+        background-color: $background-main;
+        margin: $margin-medio 0;
         @include fonts ($font-xl, $color-texto-general, 700, none, none);
     }
     
@@ -95,28 +101,37 @@
         width: 230px;
         max-width: auto;
         border-radius: $border-radius-xl;
-        border: $border-md solid $color-texto-footer-main;
+        border: $border-lg solid $color-texto-footer-main;
     }
     /* ---------- MAIN PREGUNTAS FRECUENTES ---------- */  
+    .contenedor-preguntas-frecuentes{
+        margin: $margin-grande;
+    }
+    
     .contenedor-preguntas-frecuentes h1{
-        font-size: 35px;
+        font-size: $font-xxl;
+        margin: $margin-medio;
+        padding-bottom: $padding-lg;
     }
 
     .pregunta{
-        font-size: 25px;
-        font-weight: 500;
+        font-size: $font-xl;
+        font-weight: 600;
+        letter-spacing: 3px;
     }
 
     .respuesta{
-        font-size: 25px;
-        line-height: 35px;
+        font-size: $font-xl;
+        text-align: left;
+        line-height: 40px;
     }
 
     /* ---------- MAIN PRODUCTOS ---------- */
     .main-productos h1{
-        margin: 25px 20px;
-        font-size: 35px;
-        letter-spacing: 5px;
+        margin: $margin-medio;
+        font-size: $font-xxl;
+        font-weight: 600;
+        letter-spacing: 10px;
     }
 
     .contorno-catalogo{
@@ -125,48 +140,56 @@
     }
 
     .producto{
-        border: 2px solid rgb(71, 0, 84);
-
+        border: $border-lg solid $color;
     }
 
     .producto h3{
-        font-size: 25px;
-        letter-spacing: 1px;
-        margin: 5px 0;
+        font-size: $font-xl;
+        letter-spacing: 2px;
+        margin: $margin-sm 0;
     }
 
     .producto p{
         font-weight: 500;
-        font-size: 25px;
-        padding: 5px;
+        font-size: $font-xl;
+        padding: $padding-sm;
     }
 
     .categorias-productos h2{
-        font-size: 30px;
+        font-size: $font-xl;
         letter-spacing: 3px;
-        margin: 0 20px 25px;
+        margin: 0 $margin-medio;
     }
 
     /* ---------- MAIN CONTACTO ---------- */
+    .contenedor-contacto{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        margin: $margin-grande auto;
+    }
+    
     .linea-contacto{
         width: 100%;
+        margin: $margin-grande 0;
+        border-bottom: $border-lg solid $color-texto-footer-main;
     }
 
     .titulo-contacto{
-        font-size: 35px;
+        font-size: $font-xxl;
         letter-spacing: 5px;
     }
 
-    .icono-contacto{
-        height: 40px;
+    .icono_formulario{
+        height: 50px;
     }
 
     .insertar-formulario, .insertar-formulario-mensaje{
-        font-size: 25px;
+        font-size: $font-xl;   
     }
 
     .datos-contacto-y-formulario, a{
-        font-size: 25px;
+        font-size: $font-xl;
         line-height: 80px;
         letter-spacing: 3px;
     }
@@ -186,20 +209,30 @@
 
     .contenedor-formulario{
         gap: 20px;
+
     }
 
     /* ---------- MAIN COMPRAR ---------- */
+    .comprar{
+        margin: $margin-grande;
+    }
+   
     .comprar h1, .contenedor-preguntas h1{
-        font-size: 35px;
+        font-size: $font-xxl;
+    }
+
+    .comprar h1{
+        padding-bottom: $padding-lg;
     }
 
     .comprar, .contenedor-preguntas{
-    padding: 30px 25px 10px 30px;
+        text-align: left;
+        padding: $padding-lg $padding-md $padding-mmd $padding-lg;
     }
 
     .pasos-comprar ol li{
-        font-size: 30px;
+        font-size: $font-xl;
         line-height: 35px;
-        padding-bottom: 30px;
+        padding-bottom: $padding-lg;
     }
 }

@@ -1,0 +1,270 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixin';
+
+// mq desktop
+@media screen and (min-width: 1024px){
+    /* ---------- HEADER ---------- */  
+    .contenido-header{
+        justify-content: space-between;
+        width: 100%;
+        div{
+            display: flex;
+            align-items: center;
+            a{
+                img{
+                    @include medidas (80px, auto);
+                }
+            }
+        }
+    }
+
+    // ocultar menu desplegable
+    .menu-desplegable{
+        display: none
+    }
+
+    .titulo-menu{
+        display: none;
+    }
+
+    .menu-navegacion{
+        display: flex;
+        align-items: center;
+        nav{
+            ul{
+                display: flex;
+                gap: 16px;
+                li{
+                    list-style: none;
+                    a{
+                        text-decoration: none;
+                        color: $color-texto-footer-main;
+                        font-weight: 500
+                    }
+                }
+            }
+        }
+    }
+
+    .contenedor-buscador-barra{
+        display: flex;
+        align-items: center;
+        margin-left: $margin-chico;
+        svg {
+    
+            @include medidas(20px, 20px);
+            color: $color-texto-footer-main;
+        }
+    }
+
+    .input-group{
+        display: flex;
+        align-items: center;
+        border: 1px solid $color-texto-footer-main;
+        border-radius: $border-lg;
+        padding: $padding-sm
+    }
+
+    .icono-lupa-desktop {
+      display: flex;
+      align-items: center;
+      margin-right: $margin-sm;
+    }
+
+    .form-control {
+      border: none;
+      outline: none;
+      font-size: $font-md;
+    }
+
+    // titulo menú
+    .titulo-menu{
+        @include fonts ($font-xl, $color-texto-footer-main, 600, none, none);
+    }
+    
+    // flecha menú visible
+    .flecha-menu{
+        @include medidas (35px, auto);
+    }
+
+// ---------- FOOTER ----------
+    // contenedor footer
+    .contenedor-footer{
+        display: flex;
+        flex-direction: row;
+        margin: $margin-chico;
+        align-items: flex-start;
+        justify-content: space-between;
+        text-align: left;  
+    }
+    
+    // logo
+    .logo-footer{
+        img{
+            @include medidas (130px, auto);
+        }
+    }
+    
+    // ocultar accordion
+    .accordion-mobile{
+        display: none;
+    }
+    
+    // secciones desktop
+    .opciones-footer-desktop{
+        display: flex;
+        gap: 40px;   
+    }
+    
+    .secciones-footer{
+        h1{
+            @include fonts ($font-lg, $color-texto-footer-main, 600, none, none);
+        }
+    }
+
+    .footer-enlaces{
+        li{
+            a{
+                @include fonts ($font-lg, $color-texto-footer-main, 500, none, none);               
+            }
+        }
+    }
+
+    /* estilos para la seccion follow us */
+    .seguinos{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 10px;  
+        h3{
+            font-weight: 700;
+            font-size: $font-lg;
+            margin: 0;
+        }
+    }
+    
+    .redes-sociales{
+        display: flex;
+        gap: 15px;
+    }
+
+    // redes sociales
+    .bi-whatsapp, .bi-instagram, .bi-envelope-at{
+        display: flex;
+        @include medidas (auto, 40px);
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* ---------- MAIN HOME ---------- */
+    .mas-vendidos h1 {
+        @include fonts ($font-xl, $color-texto-general, 700, none, none);
+    }
+    
+    .productos{
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* ---------- MAIN PREGUNTAS FRECUENTES ---------- */  
+    .contenedor-preguntas-frecuentes h1{
+        font-size: $font-xl;
+    }
+
+    .pregunta{
+        font-size: $font-lg;
+    }
+
+    .respuesta{
+        font-size: $font-lg;
+        text-align: left;
+    }
+
+    /* ---------- MAIN PRODUCTOS ---------- */
+    .main-productos{
+        margin: $margin-medio $margin-xxl;
+    }
+
+    .main-productos h1{
+        font-size: $font-xl;
+    }
+
+    .contorno-catalogo{
+        gap: 25px;
+        row-gap: 25px;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .producto{
+        width: 220px;
+        height: auto;
+    }
+
+    .producto h3{
+        font-size: $font-lg;
+    }
+
+    .producto p{
+        font-size: $font-lg;
+    }
+
+    .categorias-productos h2{
+        font-size: $font-lg;
+    }
+
+    /* ---------- MAIN CONTACTO ---------- */
+    .contenedor-contacto{
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: flex-start;
+        width: 80%;
+        margin: 20px auto;
+        gap: 40px;
+    }
+    
+    .linea-contacto{
+        border-bottom: none;
+    }
+
+
+    .titulo-contacto{
+        font-size: $font-xl;
+    }
+
+    .icono_formulario{
+        height: 40px;
+    }
+
+    .insertar-formulario, .insertar-formulario-mensaje{
+        font-size: $font-lg;   
+    }
+
+    .datos-contacto-y-formulario, a{
+        font-size: $font-lg;
+    }
+
+    .contenedor-formulario{
+        gap: 25px;
+    }
+
+    // linea divisoria
+    .linea-division{
+        width: 1px;
+        background-color: $color-texto-footer-main; 
+        height: 100%;
+        align-self: stretch;
+    }
+
+    .formulario-contacto{
+        width: 45%;
+    }
+
+    /* ---------- MAIN COMPRAR ---------- */
+    .comprar h1, .contenedor-preguntas h1{
+        font-size: $font-xl;
+    }
+
+    .pasos-comprar ol li{
+        font-size: $font-lg;
+    }
+}

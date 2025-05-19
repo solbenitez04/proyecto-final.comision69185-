@@ -16,7 +16,6 @@
     gap: $gap-sm;
     text-align: justify;
     line-height: 100%;
-    
     margin: $margin-chico 0 $margin-sm 0;
 }
 
@@ -28,6 +27,6 @@
 
 .respuesta{
     font-size: $font-md;
-    text-align: justify;
+    text-align: left;
     font-weight: 300;
 }

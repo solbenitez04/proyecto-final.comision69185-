@@ -13,19 +13,23 @@ $color-texto-footer-main: rgb(71, 0, 84);
 $fuente-principal: Arial, Helvetica, sans-serif;
 
 // Tamaños del texto
-$font-xl: 27px;
+$font-xxl: 35px;
+$font-xl: 30px;
 $font-lg: 22px;
 $font-md: 17px;
 $font-sm: 12px;
 
 // Espaciado y bordes
+$margin-xxl: 70px;
 $margin-grande: 50px;
 $margin-medio: 25px;
 $margin-chico: 15px;
 $margin-sm: 5px;
 
+
 $padding-lg: 30px;
-$padding-md: 20px;
+$padding-md: 25px;
+$padding-mmd: 10px;
 $padding-sm: 3px;
 
 $gap-lg: 30px;
@@ -36,5 +40,6 @@ $border-xl: 10px;
 $border-lg: 3px;
 $border-md: 2px;
 
+$border-radius-xl: 18px;
 $border-radius-lg: 15px;
 $border-radius-md: 8px;
